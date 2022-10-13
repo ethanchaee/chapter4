@@ -7,12 +7,138 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/numberTextView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:gravity="end"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="100" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height=".5dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/keypadTableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableLayout
+        android:id="@+id/keypadTableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@color/black"
+        android:showDividers="middle"
+        android:stretchColumns="*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/numberTextView">
+
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@color/black"
+            android:showDividers="middle">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="1" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="2" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="3" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="+" />
+        </TableRow>
+
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@color/black"
+            android:showDividers="middle">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="4" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="5" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="6" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="-" />
+        </TableRow>
+
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@color/black"
+            android:showDividers="middle">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="7" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="8" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="9" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="X" />
+        </TableRow>
+
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@color/black"
+            android:showDividers="middle">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="=" />
+        </TableRow>
+
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
