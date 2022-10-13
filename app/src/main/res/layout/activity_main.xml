@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/numberTextView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:gravity="end"
         android:padding="16dp"
         android:textColor="@color/black"
@@ -23,122 +23,138 @@
         android:layout_width="0dp"
         android:layout_height=".5dp"
         android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@id/keypadTableLayout"
+        app:layout_constraintBottom_toBottomOf="@id/numberTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TableLayout
-        android:id="@+id/keypadTableLayout"
+    <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:divider="@color/black"
-        android:showDividers="middle"
-        android:stretchColumns="*"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="keypadTextView1, keypadTextView2, keypadTextView3,keypadTextViewPlus,
+        keypadTextView4, keypadTextView5, keypadTextView6, keypadTextViewMinus,
+        keypadTextView7, keypadTextView8, keypadTextView9, keypadTextViewMultiply,
+        keypadTextView0, keypadTextViewEqual"
+        app:flow_horizontalGap="1dp"
+        app:flow_maxElementsWrap="4"
+        app:flow_verticalBias="1"
+        app:flow_verticalGap="1dp"
+        app:flow_wrapMode="chain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numberTextView">
+        app:layout_constraintTop_toBottomOf="@id/numberTextView" />
 
-        <TableRow
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:divider="@color/black"
-            android:showDividers="middle">
+    <TextView
+        android:id="@+id/keypadTextView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="1"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="1" />
+    <TextView
+        android:id="@+id/keypadTextView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="2"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="2" />
+    <TextView
+        android:id="@+id/keypadTextView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="3"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="3" />
+    <TextView
+        android:id="@+id/keypadTextView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="4"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="+" />
-        </TableRow>
+    <TextView
+        android:id="@+id/keypadTextView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="5"
+        tools:ignore="MissingConstraints" />
 
-        <TableRow
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:divider="@color/black"
-            android:showDividers="middle">
+    <TextView
+        android:id="@+id/keypadTextView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="6"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="4" />
+    <TextView
+        android:id="@+id/keypadTextView7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="7"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="5" />
+    <TextView
+        android:id="@+id/keypadTextView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="8"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="6" />
+    <TextView
+        android:id="@+id/keypadTextView9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="9"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="-" />
-        </TableRow>
+    <TextView
+        android:id="@+id/keypadTextViewPlus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="+"
+        tools:ignore="MissingConstraints" />
 
-        <TableRow
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:divider="@color/black"
-            android:showDividers="middle">
+    <TextView
+        android:id="@+id/keypadTextViewMinus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="-"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="7" />
+    <TextView
+        android:id="@+id/keypadTextViewMultiply"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="X"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="8" />
+    <TextView
+        android:id="@+id/keypadTextView0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="0"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="9" />
-
-            <TextView
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="X" />
-        </TableRow>
-
-        <TableRow
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:divider="@color/black"
-            android:showDividers="middle">
-
-            <TextView
-                android:layout_height="match_parent"
-                android:layout_span="2"
-                android:gravity="center"
-                android:text="0" />
-
-            <TextView
-                android:layout_height="match_parent"
-                android:layout_span="2"
-                android:gravity="center"
-                android:text="=" />
-        </TableRow>
-
-    </TableLayout>
+    <TextView
+        android:id="@+id/keypadTextViewEqual"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="="
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
