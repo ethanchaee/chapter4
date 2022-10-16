@@ -6,155 +6,154 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/numberTextView"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:gravity="end"
-        android:padding="16dp"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="100" />
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height=".5dp"
-        android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/numberTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="keypadTextView1, keypadTextView2, keypadTextView3,keypadTextViewPlus,
-        keypadTextView4, keypadTextView5, keypadTextView6, keypadTextViewMinus,
-        keypadTextView7, keypadTextView8, keypadTextView9, keypadTextViewMultiply,
-        keypadTextView0, keypadTextViewEqual"
-        app:flow_horizontalGap="1dp"
-        app:flow_maxElementsWrap="4"
-        app:flow_verticalBias="1"
-        app:flow_verticalGap="1dp"
-        app:flow_wrapMode="chain"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="equationTextView, resultTextView, keypadFlow"
+        app:flow_verticalGap="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numberTextView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/keypadTextView1"
+        android:id="@+id/equationTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="24sp"
+        android:padding="8dp"
+        android:text="equation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="result"
+        android:textSize="28sp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/keypadFlow"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:padding="8dp"
+        app:constraint_referenced_ids="button1, button2, button3, buttonClear,  button4, button5, button6, buttonPlus, button7, button8, button9, buttonMinus, button0, buttonEqual"
+        app:flow_maxElementsWrap="4"
+        app:flow_wrapMode="chain"
+        app:flow_horizontalGap="8dp"
+        app:flow_verticalGap="8dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="1"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextView2"
+    <Button
+        android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
         android:text="2"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextView3"
+    <Button
+        android:id="@+id/button3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
-        android:text="3"
+        android:text="2"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextView4"
+    <Button
+        android:id="@+id/button4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
         android:text="4"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextView5"
+    <Button
+        android:id="@+id/button5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
         android:text="5"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextView6"
+    <Button
+        android:id="@+id/button6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
         android:text="6"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextView7"
+    <Button
+        android:id="@+id/button7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
         android:text="7"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextView8"
+    <Button
+        android:id="@+id/button8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
         android:text="8"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextView9"
+    <Button
+        android:id="@+id/button9"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
         android:text="9"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextViewPlus"
+    <Button
+        android:id="@+id/button0"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:text="0"
+        app:layout_constraintHorizontal_weight="1"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="C"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/teal_200"
         android:text="+"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextViewMinus"
+    <Button
+        android:id="@+id/buttonMinus"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:backgroundTint="@color/teal_200"
         android:text="-"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextViewMultiply"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="X"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/keypadTextView0"
+    <Button
+        android:id="@+id/buttonEqual"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
-        android:text="0"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/keypadTextViewEqual"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
+        android:backgroundTint="@color/teal_700"
         android:text="="
+        app:layout_constraintHorizontal_weight="3"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
